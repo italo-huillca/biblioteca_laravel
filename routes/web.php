@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\LibroController;
 use App\Http\Controllers\PrestamoController;
 
 Route::get('/prestamos', [PrestamoController::class, 'index'])->name('prestamos.index');
@@ -15,3 +15,5 @@ Route::get('/prestamos/{prestamo}/edit', [PrestamoController::class, 'edit'])->n
 Route::put('/prestamos/{prestamo}', [PrestamoController::class, 'update'])->name('prestamos.update');
 
 Route::delete('/prestamos/{prestamo}', [PrestamoController::class, 'destroy'])->name('prestamos.destroy');
+
+Route::get('/libros/search', [LibroController::class, 'search'])->name('libros.search');
