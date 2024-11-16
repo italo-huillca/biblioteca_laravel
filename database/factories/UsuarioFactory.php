@@ -21,7 +21,7 @@ class UsuarioFactory extends Factory
     {
         return [
             'nombre' => $this->faker->name,
-            'dni' => $this->faker->unique()->dni,
+            'dni' => $this->faker->randomNumber(8, true), 
             'direccion' => $this->faker->address,
         ];
     }
